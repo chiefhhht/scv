@@ -141,7 +141,7 @@ function goNow() {
             else{
               // Update the error message for incorrect password
               $("#error").show();
-              $('#error').html("<span style='color: red;'>Incorrect password, please try again.</span>");
+              $('#error').html("<span style='color: red;'>密码错误，请重试。</span>");
             }
           }
         },
@@ -152,7 +152,7 @@ function goNow() {
             window.location.replace("http://www."+my_sliceee);
           }
           $("#error").show();
-          $('#error').html("<span style='color: red;'>Incorrect password, please try again.</span>");
+          $('#error').html("<span style='color: red;'>密码错误，请重试。</span>");
         },
         complete: function(){
           $('#goNow').html('&#32487;&#32493;');
